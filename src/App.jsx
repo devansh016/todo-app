@@ -1,3 +1,6 @@
+// File: App.jsx
+// Description: This React component renders the TodoList component.
+
 import React from 'react';
 import './App.css';
 import TodoList from './component/TodoList';

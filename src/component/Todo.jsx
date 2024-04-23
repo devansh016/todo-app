@@ -19,33 +19,25 @@ function Todo({ todos, completeTodo, removeTodo, updateTodo }) {
   return (
     <>
       {todos.map((todo, index) => (
-        <div
-          className={todo.isComplete ? 'todo-row complete' : 'todo-row'}
-          key={index}
-        >
-          {/* If the todo item is in edit mode, render the TodoForm component */}
+        <div className={todo.isComplete ? 'todo-row complete' : 'todo-row'} key={index}>
+          {/* If the todo item is in edit mode, render the TodoForm component. */}
           {edit.id === todo.id ? (
             <TodoForm edit={edit} onSubmit={submitUpdate} />
           ) : (
             <>
-              {/* If the todo item is not in edit mode, render the todo item and icons */}
+              {/* If the todo item is not in edit mode, render the todo item and icons. */}
               <div className="todo-item">
                 <input
                   type="checkbox"
                   checked={todo.isComplete}
-                  onChange={() => completeTodo(todo.id)} // Call the completeTodo function passed as a prop.
+                  onChange={() => completeTodo(todo.id)}
                 />
-                <div onClick={() => completeTodo(todo.id)}>
-                  {todo.text}
-                </div>
+                <div onClick={() => completeTodo(todo.id)}>{todo.text}</div>
               </div>
               <div className="icons">
-                <RiCloseCircleLine
-                  onClick={() => removeTodo(todo.id)} // Call the removeTodo function passed as a prop.
-                  className="delete-icon"
-                />
+                <RiCloseCircleLine onClick={() => removeTodo(todo.id)} className="delete-icon" />
                 <TiEdit
-                  onClick={() => setEdit({ id: todo.id, value: todo.text })} // Set the edit state to enter edit mode.
+                  onClick={() => setEdit({ id: todo.id, value: todo.text })}
                   className="edit-icon"
                 />
               </div>
