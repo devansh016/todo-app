@@ -4,11 +4,11 @@ A simple React-based Todo App that allows you to manage your daily tasks efficie
 
 ## Features
 
-- Add new tasks
-- Mark tasks as complete
-- Edit existing tasks
-- Delete tasks
-- Todo data is stored in the browser's local storage
+-   Add new tasks
+-   Mark tasks as complete
+-   Edit existing tasks
+-   Delete tasks
+-   Todo data is stored in the browser's local storage
 
 ## Installation
 
@@ -44,6 +44,14 @@ npm start
 
 ## Technologies Used
 
-- React
-- React Icons
-- Local Storage
+-   React
+-   React Icons
+-   Local Storage
+
+## Screenshots
+
+### Desktop
+![Desktop Screenshot](screenshots/desktop.png)
+
+### Mobile
+![Mobile Screenshot](screenshots/mobile.png)
